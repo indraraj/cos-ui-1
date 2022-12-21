@@ -11,7 +11,7 @@ import { SelectConnectorType } from '@app/pages/CreateConnectorPage/StepConnecto
 import { StepCoreConfiguration } from '@app/pages/CreateConnectorPage/StepCoreConfiguration';
 import { StepErrorHandling } from '@app/pages/CreateConnectorPage/StepErrorHandling';
 import { SelectKafkaInstance } from '@app/pages/CreateConnectorPage/StepKafkas';
-import { SelectNamespace } from '@app/pages/CreateConnectorPage/StepNamespace';
+import { SelectNamespace } from '@app/pages/CreateConnectorPage/StepDeployment';
 import { Review } from '@app/pages/CreateConnectorPage/StepReview';
 import {
   CONNECTOR_SPECIFIC,
@@ -269,7 +269,7 @@ export const CreateConnectorWizard: FunctionComponent<CreateConnectorWizardProps
       },
       kafkaInstanceStep,
       {
-        name: t('namespace'),
+        name: t('deployment'),
         isActive: state.matches('selectNamespace'),
         component: (
           <StepErrorBoundary>
